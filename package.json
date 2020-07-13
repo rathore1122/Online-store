@@ -16,6 +16,6 @@
     "msexcel-builder": "0.0.2"
   },
   "devDependencies": {
-    "csv-parse": "^2.5.0"
+    "csv-parse": "^4.4.6"
   }
 }
