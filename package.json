@@ -1,0 +1,21 @@
+{
+  "name": "excelbuild",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv": "^3.1.0",
+    "excel-builder": "^2.0.3",
+    "exceljs": "^1.5.1",
+    "express": "^4.16.4",
+    "msexcel-builder": "0.0.2"
+  },
+  "devDependencies": {
+    "csv-parse": "^2.5.0"
+  }
+}

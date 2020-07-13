@@ -1,0 +1,652 @@
+<html>
+    <head>
+    
+        <link rel="stylesheet" href="./assets/css/Home.css">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="./assets/js/mainMenuShowHide.js"></script>
+        <script src="./assets/js/addToCart.js"></script>
+        <script src="./assets/js/databaseConnectivity.js"></script>
+        <script src="./assets/js/DKCRMenuChinese.js"></script>
+        <!-- Bootstrap Dropdown Hover CSS -->
+        <link href="css/animate.min.css" rel="stylesheet">
+        <link href="css/bootstrap-dropdownhover.min.css" rel="stylesheet">
+    
+    </head>
+    
+    <body style="background-color:lightgray">
+        <div class="containner">
+            <div class="row" style="margin-top:25px">
+                <div class="col-sm-3" style="text-align:center;">
+                    <img src="./assets/images/dkcr1.png">
+                </div>
+    
+                <div class="col-sm-6" style="margin-top: 16px;padding-left: 110px;">
+                    <div class="nav navbar-nav list_style">
+                    
+                        <li class="mainMenuList" style="background:aliceblue;border-radius:15px">Home</li>
+                        <li class="mainMenuList">Menu</li>
+                        <li class="mainMenuList">About Us</li>
+                        <li class="mainMenuList">My Account</li>
+    
+                    </div>
+                </div>
+    
+                <div class="col-sm-3" style="margin-top: 28px;padding-left: 97px;">
+                    <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                    <span class="cart" style="background: white;margin-left: 6px;">
+                        <i class="fa fa-shopping-cart " style="color:red"></i>
+                        <a class="cart-contents" href="#" title="View your shopping cart" style="font-weight: bold;font-size: 12px;">
+                            <span class="itemNumberCount" style="padding: 0px 2px;">0</span>
+                            <span>items</span>
+                         </a>
+                        <a href=""><i class="fa fa-search"></i></a>
+                    </span>
+                </div>
+    
+            </div>
+        </div>
+        
+    
+        <div class="containner-fluid ">
+            <div class="row">
+                <div class="col-sm-4 header">
+                    EASY TO BOOK |
+                </div>
+                <div class="col-sm-4 header ">
+                    CORPORATE DELIVERY |
+                </div>
+                <div class="col-sm-4 header">
+                    TASTY &amp; HEALTHY FOOD |
+                </div>
+    
+            </div>
+        </div>
+    <div class="mainMenu" name="Home">
+        <div class="containner imageSlider">
+
+            <div class="row">
+                <div class="col-sm-12 ">
+    
+                    <div class="mySlides fade" style="display: none;">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="./assets/images/slide1.jpg" style="width:100%">
+                        <div class="text">Caption Text</div>
+                    </div>
+    
+                    <div class="mySlides fade" style="display: none;">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="./assets/images/slide2.jpg" style="width:100%">
+                        <div class="text">Caption Two</div>
+                    </div>
+    
+                    <div class="mySlides fade" style="display: block;">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="./assets/images/slide3.jpg" style="width:100%">
+                        <div class="text">Caption Three</div>
+                    </div>
+    
+                </div>
+                <br>
+    
+                <div style="text-align:center">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                </div>
+    
+                <script>
+                    var slideIndex = 0;
+                    showSlides();
+    
+                    function showSlides() {
+                        var i;
+                        var slides = document.getElementsByClassName("mySlides");
+                        var dots = document.getElementsByClassName("dot");
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        slideIndex++;
+                        if (slideIndex > slides.length) {
+                            slideIndex = 1
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex - 1].style.display = "block";
+                        dots[slideIndex - 1].className += " active";
+                        setTimeout(showSlides, 2000); // Change image every 2 seconds
+                    }
+                </script>
+    
+            </div>
+        </div>
+        
+      
+        <h1 style="text-align:center"><i>Our Menu</i></h1>
+        <div class="containner-fluid">
+           <!--     <ul class="products columns-4">
+                        <li class="product">
+                            <h2 class="woocommerce-loop-product__title">COMPLETE MEAL</h2>
+                            <img height="300px" width="300px" src="./assets/images//dkcr3.jpg" class="imges_group">
+                            <span class="price">
+                                <span class="woocommerce-Price-amount amount">
+                                    <span class="woocommerce-Price-currencySymbol">₹</span>80.00
+                                </span>
+                            </span>
+                        </li>
+                </ul>
+            -->
+            <div class="row mainConrentRow">
+                <div class="col-sm-3 homeContent" data-id=1>
+                    <div class="w3-card w3-white homeContentName inside-content">COMPLETE MEAL</div>
+                    <img src="./assets/images//dkcr3.jpg" class="imges_group">
+                    <div class="w3-card w3-white inside-content homeContentLastDiv">
+                        <span class="homeContentPrice">Rs.80</span>
+                        <span class="border">Add To Cart</span>
+                    </div>
+                 </div>
+
+                 <div class="col-sm-3 homeContent" data-id=2>
+                        <div class="w3-card w3-white homeContentName inside-content">CLASSIC MINI</div>
+                        <img src="./assets/images//dkcr4.jpg" class="imges_group">
+                        <div class="w3-card w3-white inside-content homeContentLastDiv">
+                            <span class="homeContentPrice">Rs.100</span>
+                            <span class="border">Add To Cart</span>
+                        </div>
+                     </div>
+                    
+                <div class="col-sm-3 homeContent" data-id=3>
+                    <div class="w3-card w3-white homeContentName inside-content">ONION CAPSICUM MUSHROOM PANEER PIZZA</div>
+                    <img src="./assets/images//dkcr5.jpg" class="imges_group">
+                    <div class="w3-card w3-white inside-content homeContentLastDiv">
+                        <span class="homeContentPrice">Rs.135</span>
+                        <span class="border">Add To Cart</span>
+                    </div>
+                 </div>
+
+
+                <div class="col-sm-3 homeContent" data-id=4>
+                    <div class="w3-card w3-white homeContentName inside-content">PANEER CHEESE PIZZA</div>
+                    <img src="./assets/images//dkcr6.jpg" class="imges_group">
+                    <div class="w3-card w3-white inside-content homeContentLastDiv">
+                        <span class="homeContentPrice">Rs.130</span>
+                        <span class="border">Add To Cart</span>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+        <h1 style="margin-left: 20px;">Special offer</h1>
+        <div class="containner-fluid">
+            <div class="row mainConrentRow">
+
+                    <div class="col-sm-3 homeContent" data-id=5>
+                            <div class="w3-card w3-white homeContentName inside-content">LAUKI KOFTA</div>
+                            <img src="./assets/images//dkcr7.jpg" class="imges_group">
+                            <div class="w3-card w3-white inside-content homeContentLastDiv">
+                                <span class="homeContentPrice">Rs.80</span>
+                                <span class="border">Add To Cart</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 homeContent" data-id=6>
+                                <div class="w3-card w3-white homeContentName inside-content">MIX VEG CURRY</div>
+                                <img src="./assets/images//dkcr8.jpg" class="imges_group">
+                                <div class="w3-card w3-white inside-content homeContentLastDiv">
+                                    <span class="homeContentPrice">Rs.150</span>
+                                    <span class="border">Add To Cart</span>
+                                </div>
+                            </div>
+                        
+                        <div class="col-sm-3 homeContent" data-id=7>
+                                <div class="w3-card w3-white homeContentName inside-content">AALU PARATHA</div>
+                                <img src="./assets/images//dkcr9.jpg" class="imges_group">
+                                <div class="w3-card w3-white inside-content homeContentLastDiv">
+                                    <span class="homeContentPrice">Rs.40</span>
+                                    <span class="border">Add To Cart</span>
+                                </div>
+                            </div>
+                        <div class="col-sm-3 homeContent" data-id=8>
+                                <div class="w3-card w3-white homeContentName inside-content">AALU PYAAZ PARATHA</div>
+                                <img src="./assets/images//dkcr10.jpg" class="imges_group">
+                                <div class="w3-card w3-white inside-content homeContentLastDiv">
+                                    <span class="homeContentPrice">Rs.80</span>
+                                    <span class="border">Add To Cart</span>
+                                </div>
+                            </div>
+            </div>
+        </div>
+    
+        
+        </div>
+
+
+    <!--Menu -->
+    <div style="display: none;position: relative;" class="mainMenu" name="Menu">
+            <div class="containner-fluid ">
+                <div class="row" style="margin-left: 50px;">
+                    <div id="sidebar1" class="sidebar col-sm-3 " role="complementary">
+                        <section id="woocommerce_product_categories-6" class="widget woocommerce widget_product_categories">
+                            <h2 class="widgettitle">PRODUCT CATEGORIES</h2>
+                            <ul class="product-categories">
+                                <li class="cat-item" style="color:red;text-decoration:underline">Chinese Food</li>
+                                <li class="cat-item">Curry</li>
+                                <li class="cat-item">Dal</li>
+                                <li class="cat-item">DKCR Thali Special</li>
+                                <li class="cat-item">Fruits</li>
+                                <li class="cat-item">Healthy Food</li>
+                                <li class="cat-item">Ice-Cream</li>
+                                <li class="cat-item">Kofta</li>
+                                <li class="cat-item">Maggie</li>
+                                <li class="cat-item">Meetha</li>
+                                <li class="cat-item">Mini Meal /Combo</li>
+                                <li class="cat-item">Mocktails</li>
+                                <li class="cat-item">Our top pickers</li>
+                                <li class="cat-item">Packages</li>
+                                <li class="cat-item">Paneer</li>
+                                <li class="cat-item">Papad</li>
+                                <li class="cat-item">Pasta</li>
+                                <li class="cat-item">Pizza</li>
+                                <li class="cat-item">Raita</li>
+                                <li class="cat-item">Rice</li>
+                                <li class="cat-item">Roti/Naan/Paratha Tawa</li>
+                                <li class="cat-item">Salad</li>
+                                <li class="cat-item">Sand Wiches Veg</li>
+                                <li class="cat-item">Semi Veg</li>
+                                <li class="cat-item">Sizzlers</li>
+                                <li class="cat-item">Snacks</li>
+                                <li class="cat-item">Soft Drink</li>
+                                <li class="cat-item">Soup</li>
+                                <li class="cat-item">South Indian</li>
+                                <li class="cat-item">Special Feast</li>
+                                <li class="cat-item">Sprouts</li>
+                                <li class="cat-item">Tea&amp;Coffee</li>
+                                <li class="cat-item">Tiffin</li>
+                                <li class="cat-item">Veg</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div id="menuMain" class="sidebar col-sm-9" style="float:right;" role="complementary">
+                        
+                    </div>
+        
+                </div>     
+            </div>
+        
+        </div>
+
+            
+        <!-- Shop
+            <div class="mainMenu" style="display:none" name="Menu">
+            <div class="containner-fluid">
+                <div class="row">
+                    <div style="margin-left:27px;" class="col-sm-12 ">
+                        <div class=" well header_second">
+                        Menu
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+            <div class="containner-fluid">
+                <div class="row">
+                    <div style="margin-left: 54px;" class="col-sm-6">
+                        <div class="nav navbar-nav">
+    
+                            <li><a> VEG </a></li>
+                            <li><a> DKCR THALI SPECIAL </a></li>
+                            <li><a> SEMI-VEG </a></li>
+                            <li><a>  SPECIAL-DIET</a></li>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+                <div class="containner-fluid">
+                    <div class="row">
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr27.jpg" class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Chinese Food</p>
+                        </div>
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr28.jpg  " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Dal</p>
+                        </div>
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr29.jpg  " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Paneer</p>
+                        </div>
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr30.jpg " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Vegitable</p>
+                        </div>
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr31.jpg " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Kofta</p>
+                        </div>
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr32.jpg " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Roti/Naan/Paratha/Tawa</p>
+                        </div>
+                    
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr33.jpg " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Rice</p>
+                        </div>
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr34.jpg " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Special Feast</p>
+                        </div>
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr35.jpg " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;"> Sand Wiches Veg</p>
+                        </div>
+                    
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr36.jpg " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Salad</p>
+                        </div>
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr37.jpg " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Maggie</p>
+                        </div>
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr38.jpg " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Mini/Meal/combo
+                        </div>
+                    
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr39.jpg " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Papad</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr40.jpg " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Meetha</p>
+                        </div>
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr41.jpg " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Pasta</p>
+                        </div>
+                    
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr42.jpg " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Raita</p>
+                        </div>
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr43.jpg " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Soup</p>
+                        </div>
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr44.jpg " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Sizzlers</p>
+                        </div>
+                   
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr45.png " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">South Indian</p>
+                        </div>
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr46.jpg " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Ice Cream</p>
+                        </div>
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr47.jpg " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Tea & Coffe</p>
+                        </div>
+                   
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr48.jpg " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Pizza</p>
+                        </div>
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr49.jpg " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Soft Drink</p>
+                        </div>
+                        <div class="col-sm-4 content">
+                            <img height="250px" width="300px" style="margin: 0px 65px;" src="./assets/images/dkcr50.png " class=" image_size">
+                            <p class="text" style="text-align:center;font-weight:bold;position: relative;color: black;margin-top: 5px;">Snacks
+                            </p>
+    
+                        </div>
+                   
+            </div>
+            </div>
+        </div>
+    -->
+    <!-- About Us -->
+        <div class="mainMenu" style="display:none" name="About Us">
+            <div class="containner-fluid">
+                    <div class="row">
+                            <div class="col-sm-1"></div>
+                                <div class="col-sm-10">
+                                    <div class=" well header_second">
+                                        About
+                                    </div>
+                                </div>
+                        <div class="col-sm-1"></div>
+                     </div>
+                    <div class="containner-fluid">
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-5">
+        
+                                <p class="design">
+                                    Onpricei.com is the ideal place to satiate all of your Indian food cravings and transports you into the quintessential home made food. It is known across the bhopal for its awesome food, great place and delivery services.</p>
+                                <p class="design">
+                                    The experience starts from the students who are persuaing their graduation from bhopal, away from their family and home, they didn’t get food that taste like their mother’s food. So, its give an idea to bring delicious food that not only taste like home made food but also made up of 100%natural and healthy ingredients.
+                                </p>
+        
+                                <p class="design"> Onpricei.com’s dinning area with DJ and some interesting interior games play a vital role in enhancing the aesthetics of the restaurant. The kitchen of the restaurant resembles a dhaba with simmering effects of tandoors and steamy tawa preparations which makes your dining experience a memorable one.</p>
+        
+                                <p class="design">Onpricei was established with a aim to provide super-delicious food to everyone living in bhopal at an affordable price. And to make this true, We have an expert and experienced chef team who is good at delivering delicious foods, snacks, juices and other food items.</p>
+        
+                                <p class="design">
+                                    Home made tasty food test like mummy .Here you can order food and tiffin online it will be delivered to your doorstep. We provide home delivery of bunch of home cooked food and hotel cooked food. We served food for many corporate zone, Student, and offices at attractive prices.
+                                </p>
+        
+                            </div>
+                            <div class="col-sm-6">
+        
+                                <img src="./assets/images/JOKER.png">
+        
+                            </div>
+                        </div>
+                    </div>
+            </div>
+    
+        </div>
+    
+        <!-- My Account -->
+        <div class="mainMenu" style="display:none" name="My Account" id="myAccount">
+    
+                <div class="containner-fluid">
+                    <div class="row myAccountRow">
+                        <div class="col-sm-12 ">
+                            <div class=" well header_second">
+                                My ACCOUNT
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="containner-fluid">
+                     <div class=" row myAccountRow">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-5">
+                            <div class="well Topfirstwell">LOGIN</div>
+                            <div class="well firstwell">
+                                <table>
+                                    <tr><td><small>Username or email address *</td></tr>
+                                    <tr><td><input type="text " name="username"></td></tr>
+                                    <tr><td><small>Password *</small></td></tr>
+                                    <tr><td><input type="password " name="password"></td></tr>
+                                    <tr><td><div class="buttonLogin">Log in</div></td></tr>
+                                    <tr><td><input type="checkbox" class="checkbox" name="check"></td></tr>
+                                    <tr><td><small class="remember"> Remember me</small></td></tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-5">
+                            <div class="well Topsecondwell">Register</div>
+                            <div class="well secondwell">
+                                <div><h2>Registration</h2></div>
+                                <table>
+                                    <tr><td><small>Email address *</small></td></tr>
+                                    <tr><td><input type="text " name="username"></td></tr>
+                                    <tr><td><small>Password</small> *</td></tr>
+                                    <tr><td><input type="password " name="password"></td></tr>
+                                    <tr><td><small>First Name *</small></td></tr>
+                                    <tr><td><input type="text " name="username"></td></tr>
+                                    <tr><td><small>Last Name</small> *</td></tr>
+                                    <tr><td><input type="password " name="password"></td></tr>
+                                    <tr><td><div class="buttonRegister"><a href "">Register</a></div></td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+        <!-- Cart -->
+        <div id="cart" class="mainMenu" style="display:none">
+            <div class="containner-fluid">
+                <div class="row myAccountRow">
+                    <div class="col-sm-12 ">
+                        <div class=" well header_second">
+                            CART
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="containner-fluid" id="mainCartBody">
+                <div class="row myAccountRow mainCartBodyPart1">
+                    <div class="col-sm-7 ">
+                        <div class="well  jumbo">
+                            <table id="cartItemsTable">
+                                <thead class="cartProduct">
+                                    <tr>
+                                        <th class="headerpro" style="width: 10px;">&nbsp;</th>
+                                        <th class="headerpro">Product</th>
+                                        <th class="headerpro">Price</th>
+                                        <th class="headerpro">Quantity</th>
+                                        <th class="headerpro">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cartItemsTableBody">
+                                   <!-- <tr class="secondelement">
+                                        <td><img src="dkcr2.jpg" width="100px" height="100px"></td>
+                                        <td><p>100.00</td>
+                                        <td>1</td>
+                                        <td>100.00</td>
+                                    </tr>   -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="well  jumbo1">
+                            <h4 class="totalhead">Cart Totals</h4>
+                            <table>
+                                <tbody class="">
+                                    <tr>
+                                        <td style="padding-left:10px" class="CartTdsubtotal">SUBTOTAL</td>
+                                        <td class="CartTdsubtotal" id="cartSubtotal" price=0>Rs. 0</td>
+                                    </tr>
+                                    <tr style="height: 28px;border: 1px solid black;border-style: dashed;color:red">
+                                        <td style="padding-left:10px" class="CartTdtotal"> TOTAL</td>
+                                        <td class="CartTdtotal" id="cartMainTotal" price=0>Rs. 0</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><div class="PRoceedbutton">PROCEED TO CHECKOUT</div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row myAccountRow mainCartBodyPart2" style="display:none;">
+                        <p class="cart-empty">Your cart is currently empty.</p>
+                        <p>Return to Shop</p>
+                </div>
+            </div>
+        </div>
+      
+        <!---- FOOTER AREA ------>
+        <div class="containner">
+            <div class="row">
+                <div class="jumbotron foot_area footer" style="padding-left: 140px;font-family: cursive;">
+                    <div class="col-sm-2" width="19.666%">
+    
+                        <ul class="footer">
+                            <li class="footerHeaders">PRODUCT CATEGORY</li>
+                            <li class="firstBody"><a href="#">Fruit </a></li>
+                            <li class="firstBody"><a href="#">Special Diet </a></li>
+                            <li class="firstBody"><a href="#">Veg </a></li>
+                            <li class="firstBody"><a href="#">Mocktails </a></li>
+                            <li class="firstBody"><a href="#">Snacks </a></li>
+                            <li class="firstBody"><a href="#">Tiffin </a></li>
+                        </ul>
+    
+                    </div>
+                    <div class="col-sm-2" width="19.666%">
+                        
+                        <ul class="footer">
+                            <li class="footerHeaders">PRODUCTS</li>
+                            <li>Pizza Ice-cream</li>
+                            <li>South-Indian</li>
+                            <li>Chinese</li>
+                            <li>Monthly-Tiffin</li>
+                            <li>Birthday Party</li>
+                            <li>Kitty Party</li>
+                            <li> Conference</li>
+                            <li> Thali</li>
+                            <li> Snacks</li>
+    
+                        </ul>
+    
+                    </div>
+                    <div class="col-sm-2" width="19.666%">
+                        <ul class="footer">
+                            <li class="footerHeaders">MEAL DEVILRY DAY</li>
+                            <li> Monday to Sunday</li>
+                            <li> Monday to Sunday</li>
+                            <li> Monday to Sunday</li>
+                            <li>Food Deliery</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2" width="19.666%">
+                        <ul class="footer">
+                            <li class="footerHeaders">Timings</li>
+                            <li>Breakfast:12pm to 5pm</li>
+                            <li>Lunch:12pm to 5pm</li>
+                            <li>Dinner:5:30pm to 11:30pm</li>
+                            <li>Online:7:00 to 1:00</li> 
+                        </ul>
+                    </div>
+                    <div class="col-sm-2" width="19.666%">
+                        <ul class="footer">
+                            <li class="footerHeaders">CONTACT</li>
+                            <li>Head office 146/7 Premium</a></li>
+                            <li>Center Zone-1 MP Nagar Bhopal</a></li>
+                            <li>Contact 9993897203</a></li>
+                            <li>ramnath@dstarena.com</li>
+    
+                        </ul>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+    </body></html>
