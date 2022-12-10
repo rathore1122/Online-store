@@ -12,7 +12,7 @@
     "csv": "^3.1.0",
     "excel-builder": "^2.0.3",
     "exceljs": "^1.5.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "msexcel-builder": "0.0.2"
   },
   "devDependencies": {
